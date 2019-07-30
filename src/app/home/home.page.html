@@ -8,13 +8,29 @@
 
 <ion-content>
   <div class="ion-padding">
-    <h4>Escolha uma pizza</h4>
+    <ion-searchbar></ion-searchbar>
     <br/>
     <br/>
     <ion-card>
-      <ion-card-header>
-        <img src="../assets/pizza1.jpg"/>
-      </ion-card-header>
+      <img src="../assets/pizza1.jpg"/>
+      <ion-card-content>
+        <ion-card-title>
+          Queijo Maluco Gourmet
+        </ion-card-title>
+        <ion-card-subtitle>
+          Queijo, Catupiry, 
+          Batata Palha, Cogumelos, 
+          Manjericão e mais uma
+          colher de caviar.
+        </ion-card-subtitle>
+        <br/>
+        <br/>
+        <ion-button color='danger'>
+          <ion-icon name='cart' slot='start'>
+          </ion-icon>
+          Comprar
+        </ion-button>
+      </ion-card-content>
     </ion-card>
   </div>
 </ion-content>

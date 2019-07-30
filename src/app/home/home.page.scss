@@ -1,1 +1,19 @@
+ion-content {
+    --background: linear-gradient(
+        135deg,
+        rgb(255, 182, 24), 
+        rgb(243, 74, 32)
+        );
+}
 
+ion-card {
+    --background: white;
+}
+
+ion-card-subtitle {
+    margin-top: 10px;
+}
+
+ion-searchbar {
+    --background: white;
+}
