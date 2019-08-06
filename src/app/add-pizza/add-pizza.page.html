@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Adicionar nova pizza</ion-title>
+    <ion-buttons>
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class='ion-padding'>
+    <form #form="ngForm" (ngSubmit)="salvar(form)">
+      <ion-item>
+        <ion-label position='floating'>Qual o nome da pizza?</ion-label>
+        <ion-input name='nomePizza' ngModel></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position='floating'>Informe a descrição da pizza:</ion-label>
+        <ion-textarea name='descricaoPizza' ngModel rows='5'></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label position='floating'>Qual o preço?</ion-label>
+        <ion-input name='precoPizza' ngModel></ion-input>
+      </ion-item>
+      <ion-button type='submit' expand='block' class="ion-margin-top">Salvar</ion-button>
+    </form>
+  </div>
+</ion-content>
