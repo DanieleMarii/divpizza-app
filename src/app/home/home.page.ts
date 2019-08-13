@@ -11,11 +11,17 @@ export class HomePage {
 
   ionViewDidEnter() {
     console.log("EXECUTOU O VIEW DID ENTER")
-    this.catalogo.push({
-      nome: 'Queijo Maluco Gourmet',
-      descricao: 'Queijo, Catupiry, Batata Palha, Cogumelos, Manjericão e mais umacolher de caviar.',
-      preco: 'R$72,00'
-    })
+    this.listarCatalogo()
+  }
+
+  listarCatalogo() {
+    const tamanhoDoBanco = localStorage.length
+    for(let i = 0; i < tamanhoDoBanco; i++) {
+      const chaveAtual = localStorage.key(i)
+      const pizzaString = localStorage.getItem(chaveAtual)
+      const pizzaObjeto = JSON.parse(pizzaString)
+      this.catalogo.push(pizzaObjeto)
+    }
   }
 
 }
