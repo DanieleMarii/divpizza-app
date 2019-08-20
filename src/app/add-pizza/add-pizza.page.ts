@@ -14,11 +14,12 @@ export class AddPizzaPage implements OnInit {
   }
 
   salvar(pizza) {
+    const chavePizza = Math.random() * 999
     const pizzaDados = pizza.value
+    pizzaDados.id = chavePizza
     const pizzaDadosString = JSON.stringify(pizzaDados)
     console.log(pizzaDadosString)
 
-    const chavePizza = Math.random() * 999
     console.log(chavePizza)
     console.log(chavePizza.toString())
 
@@ -31,15 +32,13 @@ export class AddPizzaPage implements OnInit {
     this.nav.back()
   }
 
-  exibirMensagemSucesso() {
-    this.toast.create({
+  async exibirMensagemSucesso() {
+    let criacaoDoToast = await this.toast.create({
       message: 'Pizza Cadastrada.',
       duration: 2000,
       color: 'dark'
-    }).then(toast => {
-      toast.present()
     })
-
+    criacaoDoToast.present()
   }
 
 }

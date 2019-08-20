@@ -17,3 +17,15 @@ ion-card-subtitle {
 ion-searchbar {
     --background: white;
 }
+
+.card-menu {
+    position: relative;
+}
+
+.card-menu ion-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    --background: transparent;
+    --background-activated: rgb(180, 59, 59);
+}
