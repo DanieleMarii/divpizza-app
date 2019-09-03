@@ -10,6 +10,21 @@ ion-card {
     --background: white;
 }
 
+ion-card.card-transparente {
+    --background: transparent;
+    ion-card-title {
+        color: white;
+        text-align: center;
+    }
+    box-shadow: none;
+    img {
+        width: 30%;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 ion-card-subtitle {
     margin-top: 10px;
 }

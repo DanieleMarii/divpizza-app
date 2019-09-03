@@ -5,7 +5,7 @@
     </ion-title>
     <ion-buttons slot="primary">
       <ion-button [routerLink]="['/add-pizza']">
-        <ion-icon name='add'></ion-icon>
+        <ion-icon name='add' color='danger'></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
@@ -43,6 +43,14 @@
           </ion-card-content>
         </ion-card>
       </div>
+    </div>
+    <div *ngIf="catalogo.length == 0">
+      <ion-card class="card-transparente">
+        <img src="../assets/nao-tem-pizza.png"/>
+        <ion-card-title>
+          Não há pizzas no momento.
+        </ion-card-title>
+      </ion-card>
     </div>
   </div>
 </ion-content>
