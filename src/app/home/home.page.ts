@@ -56,4 +56,8 @@ export class HomePage {
     criacaoMenu.present()
   }
 
+  comprar(id) {
+    console.log(id)
+    this.route.navigate(['comprar-pizza', id])
+  }
 }

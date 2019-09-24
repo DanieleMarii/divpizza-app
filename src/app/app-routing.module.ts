@@ -6,6 +6,7 @@ const routes: Routes = [
   { path: 'home', loadChildren: './home/home.module#HomePageModule' },
   { path: 'add-pizza', loadChildren: './add-pizza/add-pizza.module#AddPizzaPageModule' },
   { path: 'edit-pizza/:id', loadChildren: './edit-pizza/edit-pizza.module#EditPizzaPageModule' },
+  { path: 'comprar-pizza/:id', loadChildren: './comprar-pizza/comprar-pizza.module#ComprarPizzaPageModule' },
 ];
 
 @NgModule({
