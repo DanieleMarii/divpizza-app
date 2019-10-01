@@ -1,9 +1,24 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>comprar-pizza</ion-title>
+    <ion-buttons>
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Comprar {{nomePizza}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-card>
+    <img src="../assets/pizza1.jpg" />
+    <ion-card-content>
+      <ion-card-title>{{nomePizza}}</ion-card-title>
+      <ion-card-subtitle>{{descricaoPizza}}</ion-card-subtitle>
+     
+      <div class="preco">R${{precoPizza}}</div>
+    </ion-card-content>
+  </ion-card>
+  <div class="ion-padding ion-text-center ion-margin-bottom">
+  <h3>Vai dividir com quantos amigos?</h3>
+  <ion-range pin="true" min="1" max="10" (ionChange)="atualizarComRange()" [(ngModel)]="divisor"></ion-range>
+</div>
 </ion-content>
