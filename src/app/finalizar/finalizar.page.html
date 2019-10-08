@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>finalizar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Formas de Pagamento</ion-label>
+    <ion-select interface="popover">
+      <ion-select-option value="card">Cartão</ion-select-option>
+      <ion-select-option value="dinheiro">Dinheiro</ion-select-option>
+
+    </ion-select>
+
+  </ion-item>
+  <ion-item>
+    <ion-input [(ngModel)]="cep" placeholder="Digite seu CEP"></ion-input>
+    <ion-button (click)="buscarEndereco()" type="submit"><ion-icon name="search"></ion-icon>Buscar endereço
+    </ion-button>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Cidade</ion-label>
+    <ion-input readonly="readonly"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Estado</ion-label>
+      <ion-input readonly="readonly"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Número</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Complemento</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <ion-button type="submit" expand="block" [routerLink]="['/finalizar',idPizza, divisor]">Finalizar Compra</ion-button>
+
+
+</ion-content>
